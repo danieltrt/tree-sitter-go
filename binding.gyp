@@ -2,19 +2,17 @@
   "targets": [
     {
       "target_name": "tree_sitter_go_binding",
-      "dependencies": [
-        "<!(node -p \"require('node-addon-api').targets\"):node_addon_api_except",
-      ],
       "include_dirs": [
-        "src",
+        "<!(node -e \"require('nan')\")",
+        "src"
       ],
       "sources": [
-        "bindings/node/binding.cc",
         "src/parser.c",
+        "bindings/node/binding.cc"
       ],
       "cflags_c": [
-        "-std=c11",
-      ],
+        "-std=c99",
+      ]
     }
   ]
 }

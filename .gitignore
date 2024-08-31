@@ -1,7 +1,7 @@
 # Rust artifacts
 Cargo.lock
 target/
-
+**/.DS_Store
 # Node artifacts
 build/
 prebuilds/
