@@ -28,7 +28,7 @@ const
   assignment_operators = multiplicative_operators.concat(additive_operators).map(operator => operator + '=').concat('='),
 
 
-  newline = '\n',
+  newline = /\n/,
   terminator = choice(newline, ';', '\0'),
 
   hexDigit = /[0-9a-fA-F]/,
